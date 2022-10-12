@@ -1,0 +1,44 @@
+{
+	"name": "ds_csv_generic",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_ABLB_StgacntDevCustomerData",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"pFilename": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().pFilename",
+					"type": "Expression"
+				},
+				"folderPath": "landing_dir",
+				"container": "data"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			}
+		]
+	}
+}
