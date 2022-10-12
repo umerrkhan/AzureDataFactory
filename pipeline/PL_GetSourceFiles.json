@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Get All File from Folder",
+				"name": "Files in Folder",
 				"type": "GetMetadata",
 				"dependsOn": [],
 				"policy": {
@@ -41,7 +41,7 @@
 				"type": "ForEach",
 				"dependsOn": [
 					{
-						"activity": "Get All File from Folder",
+						"activity": "Files in Folder",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -50,7 +50,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('Get All File from Folder').output.childItems",
+						"value": "@activity('Files in Folder').output.childItems\r\n",
 						"type": "Expression"
 					},
 					"isSequential": true,
