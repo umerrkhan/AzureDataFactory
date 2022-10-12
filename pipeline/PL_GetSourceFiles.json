@@ -70,7 +70,13 @@
 							"typeProperties": {
 								"dataset": {
 									"referenceName": "ds_csv_generic",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"pFilename": {
+											"value": "@item().name",
+											"type": "Expression"
+										}
+									}
 								},
 								"fieldList": [],
 								"storeSettings": {
