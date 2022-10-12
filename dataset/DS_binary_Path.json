@@ -1,0 +1,34 @@
+{
+	"name": "DS_binary_Path",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_ABLB_StgacntDevCustomerData",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"pContainerName": {
+				"type": "string",
+				"defaultValue": "data"
+			},
+			"pDirectoryName": {
+				"type": "string",
+				"defaultValue": "landing_dir"
+			}
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": {
+					"value": "@dataset().pDirectoryName",
+					"type": "Expression"
+				},
+				"container": {
+					"value": "@dataset().pContainerName",
+					"type": "Expression"
+				}
+			}
+		}
+	}
+}
