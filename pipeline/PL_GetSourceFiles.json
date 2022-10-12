@@ -159,6 +159,12 @@
 							"type": "BinaryReadSettings"
 						}
 					},
+					"sink": {
+						"type": "BinarySink",
+						"storeSettings": {
+							"type": "AzureBlobStorageWriteSettings"
+						}
+					},
 					"enableStaging": false
 				},
 				"inputs": [
@@ -166,7 +172,23 @@
 						"referenceName": "ds_binary_File",
 						"type": "DatasetReference",
 						"parameters": {
-							"pdirectoryname": "landing_dir"
+							"pContainerName": "data",
+							"pdirectoryname": "landing_dir",
+							"pfilename": {
+								"value": "@variables('vLastFileName')",
+								"type": "Expression"
+							}
+						}
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "ds_binary_File",
+						"type": "DatasetReference",
+						"parameters": {
+							"pContainerName": "data",
+							"pdirectoryname": "loading_dir",
+							"pfilename": "@variables('vLastFileName')"
 						}
 					}
 				]
