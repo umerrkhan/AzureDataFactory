@@ -8,7 +8,7 @@
 		"parameters": {
 			"pContainerName": {
 				"type": "string",
-				"defaultValue": "stgaccntdevcustomerdata "
+				"defaultValue": "data"
 			},
 			"pdirectoryname": {
 				"type": "string",
