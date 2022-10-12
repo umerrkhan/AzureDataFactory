@@ -52,6 +52,7 @@
 						"value": "@activity('Get All File from Folder').output.itemName",
 						"type": "Expression"
 					},
+					"isSequential": true,
 					"activities": [
 						{
 							"name": "Get Metadata1",
@@ -71,7 +72,11 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"pContainerName": "data",
-										"pDirectoryName": "landing_dir"
+										"pDirectoryName": "landing_dir",
+										"pFileName": {
+											"value": "@item().name",
+											"type": "Expression"
+										}
 									}
 								},
 								"fieldList": [],
