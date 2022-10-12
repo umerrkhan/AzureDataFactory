@@ -51,7 +51,40 @@
 					"items": {
 						"value": "@activity('Get All File from Folder').output.itemName",
 						"type": "Expression"
-					}
+					},
+					"activities": [
+						{
+							"name": "Get Metadata1",
+							"type": "GetMetadata",
+							"dependsOn": [],
+							"policy": {
+								"timeout": "0.12:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"dataset": {
+									"referenceName": "ds_binary_Path",
+									"type": "DatasetReference",
+									"parameters": {
+										"pContainerName": "data",
+										"pDirectoryName": "landing_dir"
+									}
+								},
+								"fieldList": [],
+								"storeSettings": {
+									"type": "AzureBlobStorageReadSettings",
+									"enablePartitionDiscovery": false
+								},
+								"formatSettings": {
+									"type": "BinaryReadSettings"
+								}
+							}
+						}
+					]
 				}
 			}
 		],
