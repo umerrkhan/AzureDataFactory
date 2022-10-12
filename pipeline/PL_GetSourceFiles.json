@@ -105,7 +105,7 @@
 							"userProperties": [],
 							"typeProperties": {
 								"expression": {
-									"value": "@greater(activity('Get Metadata of FIle').output.lastModified,variables('vLastModifiedDate'))",
+									"value": "@greater(formatDateTime(activity('Get Metadata of FIle').output.lastModified,'yyyyMMddHHmmss'),formatDateTime(variables('vLastModifiedDate'),'yyyyMMddHHmmss'))",
 									"type": "Expression"
 								},
 								"ifFalseActivities": [
