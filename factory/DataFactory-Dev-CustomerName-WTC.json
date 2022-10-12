@@ -1,0 +1,9 @@
+{
+	"name": "DataFactory-Dev-CustomerName-WTC",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "5dd89f0e-1dd2-4cbe-a5c2-faaf6ec163ce",
+		"tenantId": "3617ef9b-98b4-40d9-ba43-e1ed6709cf0d"
+	}
+}
