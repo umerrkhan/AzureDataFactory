@@ -1,5 +1,5 @@
 {
-	"name": "DS_binary_Path",
+	"name": "ds_binary_Path",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "LS_ABLB_StgacntDevCustomerData",
