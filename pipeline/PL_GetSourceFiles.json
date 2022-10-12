@@ -23,7 +23,9 @@
 							"pDirectoryName": "landing_dir"
 						}
 					},
-					"fieldList": [],
+					"fieldList": [
+						"childItems"
+					],
 					"storeSettings": {
 						"type": "AzureBlobStorageReadSettings",
 						"enablePartitionDiscovery": false
@@ -32,8 +34,36 @@
 						"type": "BinaryReadSettings"
 					}
 				}
+			},
+			{
+				"name": "For Each FIle",
+				"type": "ForEach",
+				"dependsOn": [
+					{
+						"activity": "Get All File from Folder",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('Get All File from Folder').output.itemName",
+						"type": "Expression"
+					}
+				}
 			}
 		],
+		"variables": {
+			"LastFileName": {
+				"type": "String"
+			},
+			"LastModifiedDate": {
+				"type": "String",
+				"defaultValue": "1990-01-01T05:12:22Z"
+			}
+		},
 		"annotations": []
 	}
 }
