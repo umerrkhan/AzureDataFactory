@@ -1,5 +1,5 @@
 {
-	"name": "PL_GetSourceFiles",
+	"name": "PL_Get_Latest_SourceFiles_for_Loading",
 	"properties": {
 		"activities": [
 			{
