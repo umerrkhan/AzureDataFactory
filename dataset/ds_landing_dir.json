@@ -1,0 +1,22 @@
+{
+	"name": "ds_landing_dir",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_ABLB_StgacntDevCustomerData",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "landing_dir",
+				"container": "data"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
