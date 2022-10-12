@@ -139,26 +139,6 @@
 						}
 					]
 				}
-			},
-			{
-				"name": "Set variable2",
-				"type": "SetVariable",
-				"dependsOn": [
-					{
-						"activity": "FIle in a Folder",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
-				"userProperties": [],
-				"typeProperties": {
-					"variableName": "vLastModifiedDate",
-					"value": {
-						"value": "@activity('Files in Folder').output.lastModified",
-						"type": "Expression"
-					}
-				}
 			}
 		],
 		"variables": {
