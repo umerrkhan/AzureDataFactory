@@ -69,13 +69,12 @@
 							"userProperties": [],
 							"typeProperties": {
 								"dataset": {
-									"referenceName": "ds_csv_generic",
+									"referenceName": "ds_binary_File",
 									"type": "DatasetReference",
 									"parameters": {
-										"pFilename": {
-											"value": "@item().name",
-											"type": "Expression"
-										}
+										"pContainerName": "data",
+										"pdirectoryname": "landing_dir",
+										"pfilename": "@item().name"
 									}
 								},
 								"fieldList": [
@@ -88,7 +87,7 @@
 									"enablePartitionDiscovery": false
 								},
 								"formatSettings": {
-									"type": "DelimitedTextReadSettings"
+									"type": "BinaryReadSettings"
 								}
 							}
 						},
