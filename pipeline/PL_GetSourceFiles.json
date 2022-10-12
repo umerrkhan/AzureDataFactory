@@ -16,8 +16,12 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "ds_landing_dir",
-						"type": "DatasetReference"
+						"referenceName": "ds_binary_Path",
+						"type": "DatasetReference",
+						"parameters": {
+							"pContainerName": "data",
+							"pDirectoryName": "landing_dir"
+						}
 					},
 					"fieldList": [
 						"childItems"
@@ -28,7 +32,7 @@
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {
-						"type": "DelimitedTextReadSettings"
+						"type": "BinaryReadSettings"
 					}
 				}
 			},
