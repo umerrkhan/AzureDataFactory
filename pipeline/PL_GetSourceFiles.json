@@ -90,16 +90,29 @@
 									"type": "DelimitedTextReadSettings"
 								}
 							}
+						},
+						{
+							"name": "If Condition1",
+							"type": "IfCondition",
+							"dependsOn": [
+								{
+									"activity": "Get Metadata of FIle",
+									"dependencyConditions": [
+										"Succeeded"
+									]
+								}
+							],
+							"userProperties": []
 						}
 					]
 				}
 			}
 		],
 		"variables": {
-			"LastFileName": {
+			"vLastFileName": {
 				"type": "String"
 			},
-			"LastModifiedDate": {
+			"vLastModifiedDate": {
 				"type": "String",
 				"defaultValue": "1990-01-01T05:12:22Z"
 			}
