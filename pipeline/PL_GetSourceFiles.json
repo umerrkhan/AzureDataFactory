@@ -84,6 +84,7 @@
 								],
 								"storeSettings": {
 									"type": "AzureBlobStorageReadSettings",
+									"recursive": true,
 									"enablePartitionDiscovery": false
 								},
 								"formatSettings": {
@@ -121,18 +122,42 @@
 								],
 								"ifTrueActivities": [
 									{
-										"name": "Wait1",
-										"type": "Wait",
+										"name": "Set variable1",
+										"type": "SetVariable",
 										"dependsOn": [],
 										"userProperties": [],
 										"typeProperties": {
-											"waitTimeInSeconds": 1
+											"variableName": "vLastFileName",
+											"value": {
+												"value": "@activity('Get Metadata of FIle').output.itemName",
+												"type": "Expression"
+											}
 										}
 									}
 								]
 							}
 						}
 					]
+				}
+			},
+			{
+				"name": "Set variable2",
+				"type": "SetVariable",
+				"dependsOn": [
+					{
+						"activity": "FIle in a Folder",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "vLastModifiedDate",
+					"value": {
+						"value": "@activity('Files in Folder').output.lastModified",
+						"type": "Expression"
+					}
 				}
 			}
 		],
