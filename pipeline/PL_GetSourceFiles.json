@@ -109,17 +109,6 @@
 									"value": "@greater(formatDateTime(activity('Get Metadata of FIle').output.lastModified,'yyyyMMddHHmmss'),formatDateTime(variables('vLastModifiedDate'),'yyyyMMddHHmmss'))",
 									"type": "Expression"
 								},
-								"ifFalseActivities": [
-									{
-										"name": "Wait2",
-										"type": "Wait",
-										"dependsOn": [],
-										"userProperties": [],
-										"typeProperties": {
-											"waitTimeInSeconds": 1
-										}
-									}
-								],
 								"ifTrueActivities": [
 									{
 										"name": "Set variable1",
@@ -139,6 +128,48 @@
 						}
 					]
 				}
+			},
+			{
+				"name": "Copy data1",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "FIle in a Folder",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "BinarySource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true
+						},
+						"formatSettings": {
+							"type": "BinaryReadSettings"
+						}
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "ds_binary_File",
+						"type": "DatasetReference",
+						"parameters": {
+							"pdirectoryname": "landing_dir"
+						}
+					}
+				]
 			}
 		],
 		"variables": {

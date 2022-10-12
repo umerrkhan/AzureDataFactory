@@ -1,0 +1,42 @@
+{
+	"name": "ds_binary_File",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_ABLB_StgacntDevCustomerData",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"pContainerName": {
+				"type": "string",
+				"defaultValue": "stgaccntdevcustomerdata "
+			},
+			"pdirectoryname": {
+				"type": "string",
+				"defaultValue": "landing_dir"
+			},
+			"pfilename": {
+				"type": "string",
+				"defaultValue": "sales.csv"
+			}
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().pfilename",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@dataset().pdirectoryname",
+					"type": "Expression"
+				},
+				"container": {
+					"value": "@dataset().pContainerName",
+					"type": "Expression"
+				}
+			}
+		}
+	}
+}
