@@ -13,9 +13,6 @@
 			"pDirectoryName": {
 				"type": "string",
 				"defaultValue": "landing_dir"
-			},
-			"pFileName": {
-				"type": "string"
 			}
 		},
 		"annotations": [],
@@ -23,10 +20,6 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": {
-					"value": "@dataset().pFileName",
-					"type": "Expression"
-				},
 				"folderPath": {
 					"value": "@dataset().pDirectoryName",
 					"type": "Expression"
