@@ -37,7 +37,7 @@
 				}
 			},
 			{
-				"name": "For Each FIle",
+				"name": "FIle in a Folder",
 				"type": "ForEach",
 				"dependsOn": [
 					{
@@ -56,7 +56,7 @@
 					"isSequential": true,
 					"activities": [
 						{
-							"name": "Get Metadata1",
+							"name": "Get Metadata of FIle",
 							"type": "GetMetadata",
 							"dependsOn": [],
 							"policy": {
