@@ -20,7 +20,8 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"pContainerName": "data",
-							"pDirectoryName": "landing_dir"
+							"pDirectoryName": "landing_dir",
+							"pFileName": "\"\""
 						}
 					},
 					"fieldList": [
