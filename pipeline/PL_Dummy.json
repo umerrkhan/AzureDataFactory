@@ -1,0 +1,20 @@
+{
+	"name": "PL_Dummy",
+	"properties": {
+		"activities": [
+			{
+				"name": "Wait1",
+				"type": "Wait",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"waitTimeInSeconds": 0
+				}
+			}
+		],
+		"folder": {
+			"name": "Generic"
+		},
+		"annotations": []
+	}
+}
