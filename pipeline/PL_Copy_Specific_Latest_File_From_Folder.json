@@ -237,7 +237,7 @@
 				}
 			},
 			{
-				"name": "Delete1",
+				"name": "Delete Processed FIle",
 				"type": "Delete",
 				"dependsOn": [
 					{
@@ -265,7 +265,14 @@
 							"pfilename": "@variables('vLastFileName')"
 						}
 					},
-					"enableLogging": false,
+					"logStorageSettings": {
+						"linkedServiceName": {
+							"referenceName": "LS_ADLS_StgaccntDevCustomerdata",
+							"type": "LinkedServiceReference"
+						},
+						"path": "data/logs"
+					},
+					"enableLogging": true,
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
 						"recursive": true,
