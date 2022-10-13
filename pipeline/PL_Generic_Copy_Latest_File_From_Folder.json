@@ -1,6 +1,7 @@
 {
-	"name": "PL_Get_Latest_SourceFiles_for_Loading",
+	"name": "PL_Generic_Copy_Latest_File_From_Folder",
 	"properties": {
+		"description": "Picks the latest file from the Folder.\nCustomer, Accounts, Party. \njust copy the latest file from the entire folder.",
 		"activities": [
 			{
 				"name": "Files in Folder",
