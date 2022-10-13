@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"workspaceName": {
+			"value": "ws-synapse-wtc"
+		},
+		"LS_ADLS_StgaccntDevCustomerdata_accountKey": {
+			"value": ""
+		},
+		"ws-synapse-wtc-WorkspaceDefaultSqlServer_connectionString": {
+			"value": ""
+		},
+		"LS_ABLB_StgacntDevCustomerData_properties_typeProperties_serviceEndpoint": {
+			"value": "https://stgaccntdevcustomerdata.blob.core.windows.net/"
+		},
+		"LS_ADLS_StgaccntDevCustomerdata_properties_typeProperties_url": {
+			"value": "https://stgaccntdevcustomerdata.dfs.core.windows.net/"
+		},
+		"ws-synapse-wtc-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"value": "https://stgaccntdevcustomerdata.dfs.core.windows.net"
+		}
+	}
+}
