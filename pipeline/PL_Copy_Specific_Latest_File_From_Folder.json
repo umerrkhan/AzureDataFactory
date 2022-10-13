@@ -261,7 +261,7 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"pContainerName": "data",
-							"pdirectoryname": "landing_dir",
+							"pdirectoryname": "loading_dir",
 							"pfilename": "@variables('vLastFileName')"
 						}
 					},

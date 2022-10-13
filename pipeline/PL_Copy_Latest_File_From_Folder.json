@@ -1,5 +1,5 @@
 {
-	"name": "PL_Generic_Copy_Latest_File_From_Folder",
+	"name": "PL_Copy_Latest_File_From_Folder",
 	"properties": {
 		"description": "Picks the latest file from the Folder.\nCustomer, Accounts, Party. \njust copy the latest file from the entire folder.",
 		"activities": [
@@ -203,6 +203,9 @@
 				"type": "String",
 				"defaultValue": "1990-01-01T05:12:22Z"
 			}
+		},
+		"folder": {
+			"name": "Generic"
 		},
 		"annotations": []
 	}
