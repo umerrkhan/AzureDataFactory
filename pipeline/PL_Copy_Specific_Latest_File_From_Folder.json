@@ -270,7 +270,7 @@
 							"referenceName": "LS_ADLS_StgaccntDevCustomerdata",
 							"type": "LinkedServiceReference"
 						},
-						"path": "data/logs"
+						"path": "data/logs/"
 					},
 					"enableLogging": true,
 					"storeSettings": {
