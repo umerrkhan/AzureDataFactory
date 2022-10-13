@@ -41,7 +41,7 @@
 				"type": "ForEach",
 				"dependsOn": [
 					{
-						"activity": "Files in Folder",
+						"activity": "Customer Files",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -50,7 +50,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('Files in Folder').output.childItems\r\n",
+						"value": "@activity('Customer Files').output.childItems\n",
 						"type": "Expression"
 					},
 					"isSequential": true,
@@ -193,7 +193,7 @@
 				]
 			},
 			{
-				"name": "Customer",
+				"name": "Customer Files",
 				"type": "Filter",
 				"dependsOn": [
 					{
