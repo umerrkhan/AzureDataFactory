@@ -2,7 +2,7 @@
 	"name": "ds_binary_File",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "LS_ABLB_StgacntDevCustomerData",
+			"referenceName": "LS_ADLS_StgaccntDevCustomerdata",
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
@@ -23,19 +23,7 @@
 		"type": "Binary",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobStorageLocation",
-				"fileName": {
-					"value": "@dataset().pfilename",
-					"type": "Expression"
-				},
-				"folderPath": {
-					"value": "@dataset().pdirectoryname",
-					"type": "Expression"
-				},
-				"container": {
-					"value": "@dataset().pContainerName",
-					"type": "Expression"
-				}
+				"type": "AzureBlobFSLocation"
 			}
 		}
 	}
