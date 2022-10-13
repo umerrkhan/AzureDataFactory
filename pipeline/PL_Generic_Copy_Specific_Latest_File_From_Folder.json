@@ -42,7 +42,7 @@
 				"type": "ForEach",
 				"dependsOn": [
 					{
-						"activity": "Specify the FIleName Here",
+						"activity": "Customer Files",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -194,7 +194,7 @@
 				]
 			},
 			{
-				"name": "Specify the FIleName Here",
+				"name": "Customer Files",
 				"type": "Filter",
 				"dependsOn": [
 					{
