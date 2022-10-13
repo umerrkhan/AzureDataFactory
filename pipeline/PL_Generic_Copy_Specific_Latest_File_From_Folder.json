@@ -219,7 +219,8 @@
 		],
 		"variables": {
 			"vLastFileName": {
-				"type": "String"
+				"type": "String",
+				"defaultValue": "Dummy.txt"
 			},
 			"vLastModifiedDate": {
 				"type": "String",
