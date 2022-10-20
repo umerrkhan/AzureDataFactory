@@ -5,12 +5,6 @@
 			"referenceName": "LS_ADLS_StgaccntDevCustomerdata",
 			"type": "LinkedServiceReference"
 		},
-		"parameters": {
-			"DSFileName": {
-				"type": "string",
-				"defaultValue": "CUSTOMER_2011-07-14_000000.000000.txt"
-			}
-		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
