@@ -12,7 +12,7 @@
 			},
 			"pDirectoryName": {
 				"type": "string",
-				"defaultValue": "data/anding_dir"
+				"defaultValue": "data/landing_dir"
 			}
 		},
 		"annotations": [],
