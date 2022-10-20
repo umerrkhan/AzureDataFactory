@@ -5,6 +5,11 @@
 			"referenceName": "LS_ADLS_StgaccntDevCustomerdata",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"vDatasetFilename": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
