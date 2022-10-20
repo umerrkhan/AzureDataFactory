@@ -288,14 +288,6 @@
 								"value": "'@{variables('vLastFileName')}'",
 								"type": "Expression"
 							}
-						},
-						"datasetParameters": {
-							"Customer": {
-								"DSFileName": {
-									"value": "@variables('vLastFileName')",
-									"type": "Expression"
-								}
-							}
 						}
 					},
 					"compute": {
