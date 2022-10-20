@@ -21,57 +21,75 @@
 		},
 		"schema": [
 			{
+				"name": "Party_Id",
 				"type": "String"
 			},
 			{
+				"name": "CStart_Date",
 				"type": "String"
 			},
 			{
+				"name": "CEnd_Date",
 				"type": "String"
 			},
 			{
+				"name": "Salutation",
 				"type": "String"
 			},
 			{
+				"name": "Title_Name",
 				"type": "String"
 			},
 			{
+				"name": "First_Name",
 				"type": "String"
 			},
 			{
+				"name": "Last_Name",
 				"type": "String"
 			},
 			{
+				"name": "Birth_Date",
 				"type": "String"
 			},
 			{
+				"name": "Organisation_Name",
 				"type": "String"
 			},
 			{
+				"name": "External_Household_Id",
 				"type": "String"
 			},
 			{
+				"name": "Privacy_Flag",
 				"type": "String"
 			},
 			{
+				"name": "Exclude_From_Marketing_Flag",
 				"type": "String"
 			},
 			{
+				"name": "Gender_Id",
 				"type": "String"
 			},
 			{
+				"name": "Nationality_Id",
 				"type": "String"
 			},
 			{
+				"name": "Party_Type_Id",
 				"type": "String"
 			},
 			{
+				"name": "Business_Legal_Class_Id",
 				"type": "String"
 			},
 			{
+				"name": "Source_Id",
 				"type": "String"
 			},
 			{
+				"name": "Load_Id",
 				"type": "String"
 			}
 		]
