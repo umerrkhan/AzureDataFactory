@@ -170,26 +170,13 @@
 				"inputs": [
 					{
 						"referenceName": "ds_binary_File",
-						"type": "DatasetReference",
-						"parameters": {
-							"pContainerName": "data",
-							"pdirectoryname": "landing_dir",
-							"pfilename": {
-								"value": "@variables('vLastFileName')",
-								"type": "Expression"
-							}
-						}
+						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
 						"referenceName": "ds_binary_File",
-						"type": "DatasetReference",
-						"parameters": {
-							"pContainerName": "data",
-							"pdirectoryname": "loading_dir",
-							"pfilename": "@variables('vLastFileName')"
-						}
+						"type": "DatasetReference"
 					}
 				]
 			},
@@ -238,12 +225,7 @@
 				"typeProperties": {
 					"dataset": {
 						"referenceName": "ds_binary_File",
-						"type": "DatasetReference",
-						"parameters": {
-							"pContainerName": "data",
-							"pdirectoryname": "loading_dir",
-							"pfilename": "@variables('vLastFileName')"
-						}
+						"type": "DatasetReference"
 					},
 					"logStorageSettings": {
 						"linkedServiceName": {
@@ -280,16 +262,6 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"dataflow": {
-						"referenceName": "DF_Process_Customer_Data",
-						"type": "DataFlowReference",
-						"parameters": {
-							"DFParam": {
-								"value": "'@{variables('vLastFileName')}'",
-								"type": "Expression"
-							}
-						}
-					},
 					"compute": {
 						"coreCount": 8,
 						"computeType": "General"
