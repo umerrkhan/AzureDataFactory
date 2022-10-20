@@ -16,10 +16,6 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": {
-					"value": "@dataset().DSFileName",
-					"type": "Expression"
-				},
 				"folderPath": "loading_dir",
 				"fileSystem": "data"
 			},
