@@ -7,7 +7,8 @@
 		},
 		"parameters": {
 			"pContainerName": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "data"
 			},
 			"pDirectoryName": {
 				"type": "string",
