@@ -53,7 +53,7 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false,",
-				"     wildcardPaths:['\\'loading_dir/\\'+$vLastFileName']) ~> Customer",
+				"     wildcardPaths:['\\'loading_dir/\\'+$DFParam']) ~> Customer",
 				"Customer select(mapColumn(",
 				"          First_Name,",
 				"          Last_Name",
