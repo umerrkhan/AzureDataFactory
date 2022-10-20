@@ -5,12 +5,6 @@
 			"referenceName": "LS_ADLS_StgaccntDevCustomerdata",
 			"type": "LinkedServiceReference"
 		},
-		"parameters": {
-			"vDatasetFilename": {
-				"type": "string",
-				"defaultValue": "customer.txt"
-			}
-		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
