@@ -8,11 +8,11 @@
 		"parameters": {
 			"pContainerName": {
 				"type": "string",
-				"defaultValue": "data"
+				"defaultValue": "fsstgaccntdevcustomerdata"
 			},
 			"pDirectoryName": {
 				"type": "string",
-				"defaultValue": "landing_dir"
+				"defaultValue": "data/anding_dir"
 			}
 		},
 		"annotations": [],
