@@ -6,24 +6,68 @@
 			"sources": [
 				{
 					"dataset": {
-						"referenceName": "DS_Customer_DF",
+						"referenceName": "DS_Customer_DFL",
 						"type": "DatasetReference"
 					},
-					"name": "Customer"
+					"name": "source1"
+				},
+				{
+					"dataset": {
+						"referenceName": "DS_Customer_DFL",
+						"type": "DatasetReference"
+					},
+					"name": "source2"
 				}
 			],
 			"sinks": [],
 			"transformations": [],
 			"scriptLines": [
-				"parameters{",
-				"     vSrcFileName as string",
-				"}",
 				"source(output(",
-				"          Column_1 as string",
+				"          Party_Id as string,",
+				"          CStart_Date as string,",
+				"          CEnd_Date as string,",
+				"          Salutation as string,",
+				"          Title_Name as string,",
+				"          First_Name as string,",
+				"          Last_Name as string,",
+				"          Birth_Date as string,",
+				"          Organisation_Name as string,",
+				"          External_Household_Id as string,",
+				"          Privacy_Flag as string,",
+				"          Exclude_From_Marketing_Flag as string,",
+				"          Gender_Id as string,",
+				"          Nationality_Id as string,",
+				"          Party_Type_Id as string,",
+				"          Business_Legal_Class_Id as string,",
+				"          Source_Id as string,",
+				"          Load_Id as string",
 				"     ),",
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> Customer"
+				"     ignoreNoFilesFound: false) ~> source1",
+				"source(output(",
+				"          Party_Id as string,",
+				"          CStart_Date as string,",
+				"          CEnd_Date as string,",
+				"          Salutation as string,",
+				"          Title_Name as string,",
+				"          First_Name as string,",
+				"          Last_Name as string,",
+				"          Birth_Date as string,",
+				"          Organisation_Name as string,",
+				"          External_Household_Id as string,",
+				"          Privacy_Flag as string,",
+				"          Exclude_From_Marketing_Flag as string,",
+				"          Gender_Id as string,",
+				"          Nationality_Id as string,",
+				"          Party_Type_Id as string,",
+				"          Business_Legal_Class_Id as string,",
+				"          Source_Id as string,",
+				"          Load_Id as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> source2"
 			]
 		}
 	}
