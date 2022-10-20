@@ -1,0 +1,71 @@
+{
+	"name": "DF_Process_Customer_Data",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "DS_Customer_DFL",
+						"type": "DatasetReference"
+					},
+					"name": "Customer"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "DS_Customer_names_DF",
+						"type": "DatasetReference"
+					},
+					"name": "CustomerNames"
+				}
+			],
+			"transformations": [
+				{
+					"name": "select1"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          Party_Id as string,",
+				"          CStart_Date as string,",
+				"          CEnd_Date as string,",
+				"          Salutation as string,",
+				"          Title_Name as string,",
+				"          First_Name as string,",
+				"          Last_Name as string,",
+				"          Birth_Date as string,",
+				"          Organisation_Name as string,",
+				"          External_Household_Id as string,",
+				"          Privacy_Flag as string,",
+				"          Exclude_From_Marketing_Flag as string,",
+				"          Gender_Id as string,",
+				"          Nationality_Id as string,",
+				"          Party_Type_Id as string,",
+				"          Business_Legal_Class_Id as string,",
+				"          Source_Id as string,",
+				"          Load_Id as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> Customer",
+				"Customer select(mapColumn(",
+				"          First_Name,",
+				"          Last_Name",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> select1",
+				"select1 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     partitionFileNames:['CUSTOMER_Names.txt'],",
+				"     umask: 0022,",
+				"     preCommands: [],",
+				"     postCommands: [],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     partitionBy('hash', 1)) ~> CustomerNames"
+			]
+		}
+	}
+}

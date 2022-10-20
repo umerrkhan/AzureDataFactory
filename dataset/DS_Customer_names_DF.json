@@ -1,0 +1,23 @@
+{
+	"name": "DS_Customer_names_DF",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_ADLS_StgaccntDevCustomerdata",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "loading_dir",
+				"fileSystem": "data"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
