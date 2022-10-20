@@ -291,10 +291,7 @@
 						},
 						"datasetParameters": {
 							"Customer": {
-								"DSFileName": {
-									"value": "@variables('vLastFileName')",
-									"type": "Expression"
-								}
+								"DSFileName": "CUSTOMER_2011-07-14_000000.000000.txt"
 							}
 						}
 					},
