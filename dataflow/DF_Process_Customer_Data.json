@@ -27,6 +27,9 @@
 				}
 			],
 			"scriptLines": [
+				"parameters{",
+				"     DFParam as string",
+				"}",
 				"source(output(",
 				"          Party_Id as string,",
 				"          CStart_Date as string,",
